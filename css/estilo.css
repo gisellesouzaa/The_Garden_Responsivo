@@ -1,0 +1,40 @@
+:root {
+    --cor-primaria: #1F782B; 
+    --cor-primaria-contraste: #278b34; 
+    --cor-secundaria: #fff; 
+    --cor-secundaria-contraste: #e3e6e4; 
+
+  }
+
+  .btn-primary {
+    background-color: var(--cor-primaria) !important;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--cor-primaria-contraste) !important;
+  }
+
+  .btn-secondary {
+    background-color: var(--cor-secundaria) !important;
+    color: var(--cor-primaria) !important;
+    border:  var(--cor-primaria) 2px solid !important;
+  }
+
+  .btn-secondary:hover {
+    background-color:  var(--cor-secundaria-contraste) !important;
+    color: var(--cor-primaria) !important ;
+  }
+
+body {
+    padding-top: 3rem;
+}
+
+.formulario {
+    margin: 1rem auto !important;
+}
+
+.banner-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+  }
