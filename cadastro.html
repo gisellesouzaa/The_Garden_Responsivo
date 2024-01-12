@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
     <link rel="icon" href="assets/icon.png" type="image/x-icon">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -73,228 +73,250 @@
     </header>
 
 
-        <!-- Corpo da aplicação -->
-        <main>
-            <img src="assets/img1.jpg" class="img-fluid banner-image" alt="Banner">
+    <!-- Corpo da aplicação -->
+    <main>
+        <img src="assets/img1.jpg" class="img-fluid banner-image" alt="Banner">
 
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1 class="display-5">Entre em contato</h1>
-                    <p class="lead">O jardim regado com amor, florece!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita adipisci ea facilis porro est
-                        non autem doloremque asperiores? Quae cupiditate odio officia odit adipisci quaerat aperiam nam
-                        tenetur molestiae magni.
-                    </p>
-                    <a class="btn btn-primary btn-lg" href="#" role="button">Saiba mais...</a>
-                </div>
-            </div>
-
-
-            <!-- Formulário -->
-
-            <h2 class="text-center">Cadastro</h2>
+        <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-8 formulario">
+                <h1 class="display-5">Faça o seu cadastro</h1>
+                <p class="lead">Faça seu cadastro em nosso super site!</p>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita adipisci ea facilis porro est
+                    non autem doloremque asperiores? Quae cupiditate odio officia odit adipisci quaerat aperiam nam
+                    tenetur molestiae magni.
+                </p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Saiba mais...</a> -->
+            </div>
+        </div>
 
-                        <form class="needs-validation" novalidate>
-                            <div class="form-row">
-                              <div class="col-md-4 mb-3">
+
+        <!-- Formulário -->
+
+        <h3 class="text-center text-muted">Formulário de cadastro</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 formulario">
+
+                    <form class="needs-validation" method="post" action="cad_usuario.php">
+                        <div class="form-row">
+            
+                            <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">Primeiro nome</label>
-                                <input type="text" class="form-control" id="validationCustom01" placeholder="Nome"  required>
+                                <input type="text" name="nomeUsuario" class="form-control" id="validationCustom01"
+                                    placeholder="Nome" required>
                                 <div class="valid-feedback">
-                                  Tudo certo!
+                                    Tudo certo!
                                 </div>
-                              </div>
-                              <div class="col-md-4 mb-3">
+                            </div>
+                            <div class="col-md-6 mb-3">
                                 <label for="validationCustom02">Sobrenome</label>
-                                <input type="text" class="form-control" id="validationCustom02" placeholder="Sobrenome"  required>
+                                <input type="text" name="sobrenomeUsuario" class="form-control" id="validationCustom02"
+                                    placeholder="Sobrenome" required>
                                 <div class="valid-feedback">
-                                  Tudo certo!
+                                    Tudo certo!
                                 </div>
-                              </div>
-                              <div class="col-md-4 mb-3">
-                                <label for="validationCustomUsername">Usuário</label>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="email">E-mail</label>
                                 <div class="input-group">
-                                  <div class="input-group-prepend">
+                                    <div class="input-group-prepend">
                                     <span class="input-group-text" id="inputGroupPrepend">@</span>
                                   </div>
-                                  <input type="text" class="form-control" id="validationCustomUsername" placeholder="Usuário" aria-describedby="inputGroupPrepend" required>
-                                  <div class="invalid-feedback">
-                                    Por favor, escolha um nome de usuário.
-                                  </div>
+                                    <input type="email" name="email" class="form-control" id="email"
+                                        placeholder="E-mail" aria-describedby="inputGroupPrepend" required>
+                                    <!-- <small class="form-text text-muted">Não compartilhamos seu e-mail</small> -->
+                                    <div class="invalid-feedback">
+                                        Por favor, insira um e-mail válido.
+                                    </div>
                                 </div>
-                              </div>
                             </div>
-                            <div class="form-row">
+
+                            <div class="col-md-6 mb-3">
+                                <label for="senha">Senha:</label>
+                                <input type="password" name="password" class="form-control" id="password" placeholder="Senha"
+                                    aria-describedby="inputGroupPrepend" required>
+                            </div>
+
+                        </div>
+                        <div class="form-row">
                               <div class="col-md-6 mb-3">
                                 <label for="validationCustom03">Cidade</label>
-                                <input type="text" class="form-control" id="validationCustom03" placeholder="Cidade" required>
+                                <input type="text" class="form-control" id="validationCustom03" value="São Paulo" placeholder="Cidade" required>
                                 <div class="invalid-feedback">
                                   Por favor, informe uma cidade válida.
                                 </div>
                               </div>
                               <div class="col-md-3 mb-3">
                                 <label for="validationCustom04">Estado</label>
-                                <input type="text" class="form-control" id="validationCustom04" placeholder="Estado" required>
+                                <input type="text" class="form-control" id="validationCustom04" value="SP" placeholder="Estado" required>
                                 <div class="invalid-feedback">
                                   Por favor, informe um estado válido.
                                 </div>
                               </div>
                               <div class="col-md-3 mb-3">
                                 <label for="validationCustom05">CEP</label>
-                                <input type="text" class="form-control" id="validationCustom05" placeholder="CEP" required>
+                                <input type="text" class="form-control" id="validationCustom05" value="01311-000" placeholder="CEP" required>
                                 <div class="invalid-feedback">
                                   Por favor, informe um CEP válido.
                                 </div>
                               </div>
                             </div>
-                            <div class="form-group">
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                                <label class="form-check-label" for="invalidCheck">
-                                  Concordo com os termos e condições
-                                </label>
-                                <div class="invalid-feedback">
-                                  Você deve concordar, antes de continuar.
-                                </div>
-                              </div>
+                        <div class="form-group form-check">
+                            <!-- <div class="form-check"> -->
+                            <input name="newsletter" class="form-check-input" type="checkbox">
+                            <label class="form-check-label">
+                                Quero receber novidades por e-mail
+                            </label>
+                            <!-- </div> -->
+                        </div>
+
+                        <div class="form-group form-check">
+                            <!-- <div class="form-check"> -->
+                            <input class="form-check-input" type="checkbox" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Concordo com os <a href="#">termos e condições</a>
+                            </label>
+                            <div class="invalid-feedback">
+                                Você deve concordar, antes de continuar.
                             </div>
-                            <button class="btn btn-primary" type="submit">Enviar</button>
-                          </form>
-                    </div>
+                            <!-- </div> -->
+                        </div>
+
+                        <button class="btn btn-primary btn-block" type="submit">Enviar</button>
+                    </form>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1">
-    
-            <!-- Section: Links  -->
-            <section class="">
-                <div class="container text-center text-md-start mt-5">
-                    <!-- Grid row -->
-                    <div class="row mt-3">
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                            <!-- Content -->
-                            <h6 class="text-uppercase fw-bold">Desenvolvedora: <br> Giselle Souza</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <p>
-                                Projeto desenvolvido com objetivo de colocar em prática o conteúdo aprendido na materia de responsividade da Pós Graduação de Dispositivos Móveis.
-                            </p>
-                        </div>
-                        <!-- Grid column -->
+    <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1">
 
-                        <!-- Grid column -->
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <!-- Links -->
-                            <h6 class="text-uppercase fw-bold">Produtos</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <p>
-                                <a href="#" class="text-dark">Naturais</a>
-                            </p>
-                            <p>
-                                <a href="#" class="text-dark">Sem agrotóxico</a>
-                            </p>
-                            <p>
-                                <a href="#" class="text-dark">Plantação urbana</a>
-                            </p>
-                            <p>
-                                <a href="#" class="text-dark">Plantas silvestres</a>
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <!-- Links -->
-                            <h6 class="text-uppercase fw-bold">Links</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <p>
-                                <a href="#!" class="text-dark">Sua conta</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-dark">Afiliados</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-dark">Perguntas frequentes</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-dark">Ajuda</a>
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                            <!-- Links -->
-                            <h6 class="text-uppercase fw-bold">Contatos</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #7c4dff; height: 2px" />
-                            <p><i class="fas fa-home mr-3"></i> São Paulo, SP </p>
-                            <p><i class="fas fa-envelope mr-3"></i> info@thegarden.com</p>
-                            <p><i class="fas fa-phone mr-3"></i> 11 2345-5986</p>
-                            <p><i class="fab fa-whatsapp mr-3"></i>  11 96934-5678</p>
-                        </div>
-                        <!-- Grid column -->
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold">Desenvolvedora: <br> Giselle Souza</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            Projeto desenvolvido com objetivo de colocar em prática o conteúdo aprendido na materia de
+                            responsividade da Pós Graduação de Dispositivos Móveis.
+                        </p>
                     </div>
-                    <!-- Grid row -->
-                </div>
-            </section>
-            <!-- Section: Links  -->
+                    <!-- Grid column -->
 
-               <!-- Section: Social media -->
-               <section class="d-flex justify-content-between p-4 text-white" style="background-color: #1F782B">
-                <!-- Left -->
-                <div class="me-5">
-                    <span>Entre em contato através das redes sociais:</span>
-                </div>
-                <!-- Left -->
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Produtos</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="#" class="text-dark">Naturais</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-dark">Sem agrotóxico</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-dark">Plantação urbana</a>
+                        </p>
+                        <p>
+                            <a href="#" class="text-dark">Plantas silvestres</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
 
-                <!-- Right -->
-                <div>
-                    <a href="https://www.linkedin.com/in/giselle-de-souza-gabriel/" target="_blank" class="text-white me-4">
-                        <i class="fab fa-linkedin fa-2x"></i>
-                    </a>
-                    <a href="https://github.com/gisellesouzaa"  target="_blank" class="text-white me-4">
-                        <i class="fab fa-github fa-2x"></i>
-                    </a>
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Links</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="#!" class="text-dark">Sua conta</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-dark">Afiliados</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-dark">Perguntas frequentes</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-dark">Ajuda</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Contatos</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p><i class="fas fa-home mr-3"></i> São Paulo, SP </p>
+                        <p><i class="fas fa-envelope mr-3"></i> info@thegarden.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> 11 2345-5986</p>
+                        <p><i class="fab fa-whatsapp mr-3"></i> 11 96934-5678</p>
+                    </div>
+                    <!-- Grid column -->
                 </div>
-                <!-- Right -->
-            </section>
-            
-            <!-- Copyright -->
-            <div class="text-center p-3 bg-dark text-light">
-                © 2024 Copyright: 
-                <a class="text-light" href="https://gisellesouzaa.github.io/portfolio/" target="_blank"
-                >Giselle Souza</a
-               >
+                <!-- Grid row -->
             </div>
-        </footer>
+        </section>
+        <!-- Section: Links  -->
 
-        <script>
-            // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
-            (function() {
-              'use strict';
-              window.addEventListener('load', function() {
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-between p-4 text-white" style="background-color: #1F782B">
+            <!-- Left -->
+            <div class="me-5">
+                <span>Entre em contato através das redes sociais:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="https://www.linkedin.com/in/giselle-de-souza-gabriel/" target="_blank" class="text-white me-4">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/gisellesouzaa" target="_blank" class="text-white me-4">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+
+        <!-- Copyright -->
+        <div class="text-center p-3 bg-dark text-light">
+            © 2024 Copyright:
+            <a class="text-light" href="https://gisellesouzaa.github.io/portfolio/" target="_blank">Giselle Souza</a>
+        </div>
+    </footer>
+
+    <script>
+        // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
                 // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
                 var forms = document.getElementsByClassName('needs-validation');
                 // Faz um loop neles e evita o envio
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                  form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                      event.preventDefault();
-                      event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                  }, false);
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
                 });
-              }, false);
-            })();
-            </script>
+            }, false);
+        })();
+    </script>
 
 </body>
 
